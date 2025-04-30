@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <xs:schema
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="https://systemsdk.github.io/phpcpd/schema"
-    targetNamespace="https://systemsdk.github.io/phpcpd/schema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="https://systemsdk.github.io/phpcpd/report"
+    targetNamespace="https://systemsdk.github.io/phpcpd/report"
     elementFormDefault="qualified">
 
     <xsd:annotation>

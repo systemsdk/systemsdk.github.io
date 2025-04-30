@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  xmlns:cpd="https://systemsdk.github.io/phpcpd/schema" exclude-result-prefixes="cpd">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  xmlns:cpd="https://systemsdk.github.io/phpcpd/report" exclude-result-prefixes="cpd">
 <xsl:output method="html" doctype-system="about:legacy-compat"/>
 <xsl:template match="/">
 <html>
@@ -18,11 +18,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"/>
   <script src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.13.4/b-2.3.6/b-html5-2.3.6/b-print-2.3.6/datatables.min.js"/>
+  <title>PHPCPD Report</title>
+  <link rel="icon" href="https://systemsdk.github.io/images/favicon.ico" sizes="32x32" />
 
 </head>
 <body style="padding-top: 3.5rem;">
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">PHP Copy/Paste Detector</a>
+      <a class="navbar-brand" href="#"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,13 +45,14 @@
           </li>
         </ul>
       </div>
+      <img alt="Logo" src="https://systemsdk.github.io/images/logo-white-small.png" style="border-right: 20px solid;"/>
   </nav>
 
     <div class="container">
       <div class="row">
         <div class="col">
-          <h4>Summary of duplicated code</h4>
-          <p>This page summarizes the code fragments that have been found to be replicated in the code.</p>
+            <h4>PHPCPD <font color="#0000FF"><xsl:value-of select="cpd:pmd-cpd/attribute::phpcpdVersion"/></font> - Summary of duplicated code</h4>
+            <p>This page summarizes the code fragments that have been found at <font color="#0000FF"><xsl:value-of select="cpd:pmd-cpd/attribute::timestamp"/></font> to be replicated in the code.</p>
 
           <table class="table table-light table-bordered table-striped table-hover">
             <tr>
